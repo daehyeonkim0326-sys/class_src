@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form tag</title>
+</head>
+<body>
+    <form method="get">
+        <label>
+            <span>이름 : </span>
+            <input type="text" name="user-name" placeholder="이름을 입력하세요.">
+        </label>
+        <br>
+        <label for="email">메일주소 : </label>
+        <input type="email" id="email" name="user-email" placeholder="메일주소를 입력하세요.">
+        <!-- <input type="submit" value="전송"> -->
+        <br>
+        <input type="radio" id="html" name="lang" value="html">
+        <label for="html">HTML</label>
+        <input type="radio" id="css" name="lang" value="css">
+        <label for="css">CSS</label>
+        <input type="radio" id="js" name="lang" value="js">
+        <label for="js">javascrept</label>
+        <br>
+        <input type="checkbox" id="check-html" name="check-html">
+        <label for="check-html">html</label>
+        <input type="checkbox" id="check-css" name="check-css">
+        <label for="check-css">css</label>
+        <input type="checkbox" id="check-js" name="check-js">
+        <label for="check-js">js</label>
+        <hr>
+        <button type="submit">로그인</button>
+        <button type="reset">초기화</button>
+    </form>
+    
+</body>
+</html>

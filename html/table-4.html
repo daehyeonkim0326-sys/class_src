@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표 합치기</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td rowspan="2">1<br>4</td>
+            <td colspan="2">2 3</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </table>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음식 메뉴 구성표</title>
+</head>
+<body>
+    <table border="1">
+        <caption>점심 메뉴 구성</caption>
+        <colgroup>
+        <col style="background-color: blue;">
+        <col span="2" style="background-color: khaki;"
+        </colgroup>
+        <thead>
+        <tr>
+            <th>카테고리</th>
+            <th>메뉴</th>
+            <th>가격</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td rowspan="2">한식</td>
+            <td>비빔밥</td>
+            <td>9,000원</td>
+        </tr>
+        <tr>
+            <td>된장찌개</td>
+            <td>7,000원</td>
+        </tr>
+        <tr>
+            <td rowspan="2">양식</td>
+            <td colspan="2">샐러드바</td>
+        </tr>
+        <td>스테이크</td>
+        <td>30,000원</td>
+        </tbody>
+    </table>
+</body>
+</html>

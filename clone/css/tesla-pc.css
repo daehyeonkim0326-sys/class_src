@@ -1,0 +1,224 @@
+@charset "utf-8";
+
+/* class */
+.blue{
+    background-color: #3e6ae1;
+    color: #fff;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+    width: 200px;
+    text-align: center;
+}
+.white{
+    background-color: #fff;
+    color: #222;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+    width: 200px;
+    text-align: center;
+}
+.white_e{
+    background-color: #d1d0d0;
+    color: #222;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+    width: 200px;
+    text-align: center
+}
+.black{
+    background-color: #000;
+    color: #fff;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+    width: 200px;
+    text-align: center;
+}
+/* header 영역 시작 */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+header > p{
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 4px;
+}
+header > nav{
+    display: flex;
+    align-items: center;
+} 
+header > nav > a{
+    padding: 0.5rem 1rem; /* 1rem=16px 0.5rem=8 */
+    border-radius: 0.5rem;
+}
+header > nav > a:hover{
+    background-color: #ddd;
+    background-size: 0.5rem;
+}
+header > ul {
+    display: flex;
+    gap: 1rem;
+}
+/* header 영역 끝 */
+
+/* main 영역 시작 */
+main{
+    height: 80vh;
+    background-image: url(../image/imgi_1_Homepage-Promotional-Carousel-Model-3-Desktop-US.png);
+    background-size: cover;
+    background-position: center 60%;
+    text-align: center;
+    color: white;
+}
+main > h1{
+    font-size: 4rem;
+}
+main > h1, main > h2{
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+main > a{
+    text-decoration:underline ;
+}
+main > .btn-wrap{
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+main > .btn-wrap > p:hover{
+    cursor: pointer;
+    filter: brightness(0.7);
+}
+
+/* main 영역 끝 */
+
+/* section영역 시작*/
+#model{
+    /* overflow-x: hidden; */
+    padding: 2rem;
+}
+#model > .model-item{
+    width: 150vh;
+    display: flex;
+    gap: 2rem;
+}
+.model-item > article{
+    color: #fff;
+    width: 800px;
+    height: 600px;
+    background-image: url(../image/imgi_2_Homepage-Card-Model-Y-Desktop.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    border-radius: 1rem;
+    /* border: 2px solid #fff; */
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #000,0 0 0 4px #000;
+}
+#model article:nth-child(1){
+    background-image: url(../image/imgi_2_Homepage-Card-Model-Y-Desktop.png);
+}
+#model article:nth-child(2){
+    background-image: url(../image/imgi_3_Homepage-Grid-Test-Drive-Global.png);
+}
+#model > article > .bottom-text > h2{
+    font-size: 3rem;
+}
+.model-item > article > .bottom-text > .btn-wrap{
+    display: flex;
+    gap: 1rem;}
+#model > .indicator > ul{
+    display: flex;   
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+#model > .indicator > li{
+    width: 50px;
+    height: 50px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#model > .indicator > li:first-child{
+    background-color: #222;
+}
+
+
+/* section 영역 끝 */
+
+/* section 영역 시작 */
+#act{
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+#act > article{
+    width: 50%;
+    height: 200px;
+    display: flex;
+    background-color: #eee;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+#act > article > div{
+    /* flex: 2; */
+    width: 70%;
+    border-right: 2px solid #000;
+    padding: 2rem;
+}
+#act > article >img{
+    /* flex: 1; */
+    width: 30%;
+    aspect-ratio: 3/1;
+    object-fit: cover;
+}
+
+
+
+/* section 영역 끝 */
+/*network 영역 시작*/
+#network{
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+#network > .left{
+    padding: 1rem;
+}
+#network > .left > .btn-wrap{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+#network > .right{
+    display: flex;
+    gap: 1rem;
+    color: #555;
+}
+#network > .right > .one > .number > div{
+    color: #f00;
+}
+#network > .right > div > p{
+    font-size: 12px;
+}
+#network > .right > div > .number{
+    display: flex;
+    font-size: 2rem;
+}
+#network > .right > div > .number > div{
+    border: 1px solid #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+/* network 영역 끝 */

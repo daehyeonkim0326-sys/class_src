@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box model</title>
+    <style>
+        div{
+            width: 300px;
+            /* height: 300px; */
+            box-sizing: border-box;
+            border: 5px solid #00f;
+            padding: 10px;
+            margin: 10px;
+            background-color: tomato;
+            display: none;
+            /* visibility: hidden; */
+        }
+        span{
+            background-color: aqua;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div>box1</div> 
+    <div>box2</div>
+    <div>box3</div>
+    <span>인라인태그</span>
+</body>
+</html>

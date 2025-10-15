@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tesla main page</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        header{
+            background-color: rgba(10,10,10,0.5);
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+        nav>p{
+            background-color: rgba(10,10,10,0.5);
+            padding: 8px 16px;
+            border-radius: 0.5rem;
+        }
+        #banner{
+            height: 300px;
+            text-align: center;
+            color: #fff;
+        }
+        #banner >a{
+            color:#ffffff;
+        }
+        .btn-wrap{
+            margin: 1rem;
+        }
+        .btn-wrap > p{
+            width: 150px;
+            display: inline-block;
+            border-radius: 0.5rem;
+            padding: 1rem;
+        }
+        .btn-wrap > p:nth-child(1){
+            background-color: #00f;
+            color: #fff;
+        }
+        .btn-wrap > p:nth-child(2){
+            background-color: #fff;
+            color: black;
+        }
+        .btn-wrap>p:hover{
+            background-color: rgba(10,10,10,0.5);
+        }
+        a:hover{
+            text-decoration: solid;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>TESLA</h1>
+            <P>메뉴</P>
+        </nav>
+        <div id="banner">
+            <h2>Model3 ZERO 프로모션</h2>
+            <h3>보조금과 함께 더운 합리적으로</h3>
+            <a href="#">자세히 알아보기</a>
+            <div class="btn-wrap">
+                <p>인벤토리 보기</p>
+                <p>시승 신청</p>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

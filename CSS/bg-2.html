@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>BACKGROUND</title>
+    <style>
+        *{ margin: 0; padding: 0; }
+        .panel{
+            height: : 30vh;
+            text-align: center;
+            padding-top: 40px;
+            background-image:linear-gradient(135deg,rgba(195, 34, 120, 1) 0%, rgba(253, 187, 45, 1) 100%);
+
+        }
+        .parallax-1, .parallax-2{
+            height: 60vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .parallax-1{
+            background-image: url(../assets/images/imege-2.jpg);
+        }
+        .parallax-2{
+            background-image: url(../assets/images/image-1.jpg);   
+        }
+        p::before{
+            content: "추가";
+        }
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <h1 class="panel">welcome</h1>
+        <p>
+            <i class="fa-solid fa-user"></i>
+        </p>
+        <div class="parallax-1"></div>
+        <div class="panel"> Esse deserunt ea irure sit culpa reprehenderit ad dolor Lorem non aliquip laboris ipsum. Eu excepteur eu consequat aliqua ipsum voluptate duis pariatur nostrud aliqua sit proident. Sunt pariatur nulla voluptate est amet. Do est officia nostrud deserunt nulla ipsum eu deserunt proident occaecat ut dolore id.</div>
+        <div class="parallax-2"></div>
+            <p class="panel">스크롤 끝</p>
+    </section>
+</body>
+</html>

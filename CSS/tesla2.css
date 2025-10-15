@@ -1,0 +1,64 @@
+@charset 'utf-8';
+
+*{ margin: 0; padding: 0;}
+section{
+    padding: 24px;
+}
+section > .top{
+    height: 500px;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+section > .top > .bottom > h2{
+    font-size: 68px;
+    margin-bottom: 20px;
+}
+section > .top > .bottom > .btn-wrap{
+display: flex;
+gap: 10px;
+}
+section > .top > .bottom > .btn-wrap > p{
+    padding: 8px 32px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    transition: 0.3s;
+}
+section > .top > .bottom > .btn-wrap > p:nth-child(1){
+    background-color: rgb(41, 41, 197);
+}
+section > .top > .bottom > .btn-wrap > p:hover{
+    cursor: pointer;
+    filter: brightness(0.8);
+}
+/* section > .top > .bottom > .btn-wrap > p:nth-child(1):hover{
+    background-color: rgb(22, 22, 109);
+    cursor: pointer;
+} */
+section > .top > .bottom > .btn-wrap > p:nth-child(2){
+    background-color: #fff;
+    color: #000;
+}
+/* section > .top > .bottom > .btn-wrap > p:nth-child(2):hover{
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+} */
+section > .indicator > ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 24px 0;
+}
+section > .indicator > ul > li{
+    width: 20px;
+    height: 20px;
+    background-color: #ddd;
+align-self: ;}
+section > .indicator > ul > li:nth-   

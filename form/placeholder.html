@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>type이 text 일 경우만 색상변경</title>
+    <style>
+        label{
+            display: block;
+        }
+        input[type="text"]::placeholder{
+            color: #f00;
+        }
+        input:focus{
+            outline: 2px solid rgb(255, 0, 128);
+            border-radius: 2px;  
+        }
+        input[type="radio"]{
+            accent-color: #ff0;
+            
+        }
+        input[type=radio]:checked + span{
+            /* outline: 2px solid #00f; */
+            /* box-shadow: 0 0 10px #ff0; */
+            color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>텍스트입력</legend>
+        <label>
+            <span>아이디 : </span>
+            <input 
+                type="text" 
+                name="user-id" 
+                autocomplete="off"
+                placeholder="아이디를 입력하세요"
+                autofocus
+            >
+        </label>
+        <label>
+            <span>이메일 : </span>
+            <input 
+                type="email" 
+                name="user-email"
+                placeholder="이메일을 입력하세요"
+            >
+        </label>
+    </fieldset>
+    <fieldset>
+        <legend>좋아하는 색상을 선택하세요</legend>
+        <label>
+            <input type="radio" name="color" checked>
+            <span>빨강</span>
+        </label>
+        <label>
+            <input type="radio" name="color">
+            <span>파랑</span>
+        </label>
+    </fieldset>
+</body>
+</html>

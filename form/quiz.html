@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz</title>
+    <style>
+        label,input{ display: inline-block;}
+        label{
+            display: block;
+            width: 150px;
+            text-align: right;
+        }
+        .nm{
+            display: block;
+            justify-content: left;
+        }
+    </style>
+</head>
+<body>
+    <form method="get">
+        <h1>프론트엔드 개발자 지원서</h1>
+        <p>html,css,javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+        <hr>
+        <h2>개인정보</h2>
+            <div class="nm">
+                <label for="nm">이름</label>
+                <input type="text"id="nm" placeholder="공백없이 입력하세요" autofocus required>
+            </div>
+            <div class="call">
+                <label for="call">연락처</label>
+                <input type="text" id="call">
+            </div>
+        <h2>지원분야</h2>
+            <label>
+                <input type="radio" name="web">
+                <span>웹 퍼블리싱</span>
+            </label>
+            <label>
+                <input type="radio" name="web">
+                <span>웹 애플리케이션 개발</span>
+            </label>
+            <label>
+                <input type="radio" name="web">
+                <span>개발 환경 개선</span>
+            </label>
+        <h2>지원 동기</h2>
+            <label for="area"></label>
+            <textarea 
+            name="area" 
+            id="area"
+            rows="5"
+            cols="40"
+            placeholder="본사 지원 동기를 간략히 써 주세요."
+            maxlength="200"
+            required></textarea>
+            <button type="submit">접수하기</button>
+            <button type="submit">다시쓰기</button>
+    </form>
+</body>
+</html>

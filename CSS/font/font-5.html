@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폰트사이즈</title>
+    <!--  가변 :em, rem, vw, vh -->
+      <!-- 기본 폰트 사이즈:16px -->
+       <style>
+            html{font-size: clamp(10px,5vw,40px);}
+            #main{ 
+                font-size: 5vw;
+                width: 50vw;
+                height: 50vh;
+                background-color: brown;
+            }
+             #main > p{ 
+                font-style: oblique;
+                text-shadow: 10px 10px 5px #100;
+            }
+            .sub{ font-size: 2rem;}   
+            .sub > p{ font-size: 3rem;}
+            .small{ font-variant: small-caps;}
+            /* 전각문자:모든 글자가 동일한 가로폭을 갖는것 */
+            .transform{text-transform: full-width;}
+       </style>
+</head>
+<body>
+    <div id="main">
+        <p>main 아래 폰트사이즈</p>
+        <div class="'sub">
+            <p>sub 아래 폰트사이즈</p>
+        </div>
+    </div>
+    <p class="small">시드니(sydney)</p>
+    <p>시드니(sydney)</p>
+    <P class="transform">ABC 123 !?</P>
+    <P>ABC 123 !?</P>
+</body>
+</html>

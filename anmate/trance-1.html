@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        body{
+            /* perspective: 900px; */
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            /* background-color: tomato; */
+            transition-duration: 0.5s;
+        }
+        .box1:hover{
+            transform: translateX(300px);
+        }
+        .box2{
+            margin-left: 500px;
+            width: 80px;
+            height: 50px;
+            /* background-color: orange; */
+            transition-duration: 1s;
+        }
+        input:checked ~ .box2{
+            /* transform: rotateZ(45deg); */
+            /* transform: translateZ(-500px); */
+            /* transform: scale(2); */
+            transform: skew(35deg, 20deg)
+        }
+        input > #check{
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"><img src="../assets/images/png-clipart-iconos-cinnamoroll-cinnamoroll-by-minniekawaiitutos-37-animal-on-plane-illustration-thumbnail.png" alt="시나몬"></div>
+    <input type="checkbox" id="check">
+    <label for="check">애니메이션 실행</label>
+    <div class="box2"><img src="../assets/images/Y-R4WKobnTni6s2xq7ghHG-ng4qtPwz5rhpSnYHeSEio76ecRazUrZ8hKXAdAtzTmRxNvxSCgzLPrv5Ibhqn_Q.webp" alt="시나모롤"></div>
+</body>
+</html>

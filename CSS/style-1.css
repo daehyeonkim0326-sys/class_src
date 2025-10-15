@@ -1,0 +1,19 @@
+/* p{
+    width: 50vw;
+    height: 50vh;
+    background-color: aquamarine;
+    font-size: 5vw;
+    font-size: clamp(16px,5vw,36px);
+} */
+ html{
+    font-size: 20px;
+ }
+body{
+    font-size: 20px;
+}
+div{
+    font-size: 2em; /* 20*2 = 40px*/
+}
+p{
+    font-size: 2rem; /* 80 */ 
+}
