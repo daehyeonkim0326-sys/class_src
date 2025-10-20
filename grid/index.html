@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>그리드레이아웃</title>
+</head>
+<body class=".orbitron-base">
+    <input type="checkbox" id="menu-check">
+    <label for="menu-check">
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+    </label>
+    <input type="radio" name="menu-list" id="menu-1" checked> 
+    <input type="radio" name="menu-list" id="menu-2">
+    <input type="radio" name="menu-list" id="menu-3">
+    <input type="text">
+    <nav class="bar">
+        <img src="images/images/logo.png" alt="logo">
+        <ul>
+            <li><label for="menu-1">Homme</label></li>
+            <li><label for="menu-2">Girl</label></li>
+            <li><label for="menu-3">Kids</label></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="homme">
+            <p>Vogue Homme</p>
+            <p></p>
+            <p></p>
+            <p>Travis Crown</p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p>Dior</p>
+            <p>Best</p>
+            <p></p>
+            <p>slksa</p>
+        </section>
+        <section id="girl">
+            <p>trancdous</p>
+            <p>2</p>
+            <p>Vogue girl</p>
+            <p>4</p>
+            <p>5</p>
+            <p>6</p> 
+            <p>Accesories</p>
+            <p>8</p>
+            <p>Jewerly</p>
+            <p>10</p>
+            <p>11</p>
+        </section>
+        <section id="kids">
+            <p></p>
+            <p>Play&Dolls</p>
+            <p></p>
+            <p>Vogue Kids</p>
+            <p></p>
+            <p>Clothes</p>
+            <p></p>
+        </section>
+    </main>
+    <script>
+        const elem = document.querySelectorAll("nav>ul>li>label");
+        elem.forEach((label)=>{ 
+            label.addEventListener("click",()=>{
+            document.getElementById("menu-cheke").checked = false;
+        });
+        });
+    </script>
+</body>
+</html>

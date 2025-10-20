@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 900px;
+}
+.book-img{
+    width: 300px;
+    height: 500px;
+    position: relative;
+    /* transform: rotateY(60deg); */
+    transform-style: preserve-3d;
+    transition: 0.5s;
+}
+.book-img.flipped{
+    transform: rotateY(180deg);
+}
+.book-img:not(.flipped):hover{
+    transform: rotateY(30deg);
+    cursor: url(../image/arow-2.png), auto;
+}
+.page{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+.page > div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility:hidden;
+}
+.front{
+    background-color: dodgerblue;
+    transform: translateZ(35px);
+}
+.back{
+    background-color: aqua;
+    transform: translateZ(-35px) rotateY(180deg);
+}
+.side{
+    background-color: blueviolet;
+    width: 70px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -35px;
+    transform: rotateY(-90deg);
+}

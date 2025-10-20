@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형</title>
+    <style>
+        *{ margin: 0; padding: 0;}
+        ul{
+            list-style: none;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            background-color: #ddd;
+            width: 80%;
+            margin: 1rem auto;
+        }
+        ul > li{
+            background-color: aqua;
+            padding: 0.5rem 1rem;
+        }
+        body{
+            background-color: #222;
+        }
+        div{
+            display: grid;
+            grid-template-columns: 1fr;
+            background-color: #ccc;
+            width: 80%;
+            margin: 2rem auto;
+        }
+        div > p{
+            background-color: aqua;
+        }
+        @media all and (min-width: 321px){
+            body{background-color: blue;}
+            div{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+        @media all and (min-width: 768px){
+        h1{
+            display: none;
+        }
+        ul{ flex-direction: row;}
+        div{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+    /* 1024px 이상일 경우에는 grid를 4줄로 보이게 */
+    @media all and (min-width:1024px) {
+        div{
+            grid-template-columns: repeat(4,1fr);
+        }
+    }
+    </style>
+</head>
+<body>
+    <h1>타이틀</h1>
+    <ul>
+        <li>menu-1</li>
+        <li>menu-2</li>
+        <li>menu-3</li>
+        <li>menu-4</li>
+    </ul>
+    <div>
+        <p>box1</p>
+        <p>box2</p>
+        <p>box3</p>
+        <p>box4</p>
+        <p>box5</p>
+        <p>box6</p>
+        <p>box7</p>
+        <p>box8</p>
+    </div>
+    <picture>
+        <source srcset="../assets/images/image-1.jpg" media="(max-width:1024px)">
+        <source srcset="../assets/images/Y-R4WKobnTni6s2xq7ghHG-ng4qtPwz5rhpSnYHeSEio76ecRazUrZ8hKXAdAtzTmRxNvxSCgzLPrv5Ibhqn_Q.webp" media="(min-width:768px)">
+        <source srcset="../assets/images/png-clipart-iconos-cinnamoroll-cinnamoroll-by-minniekawaiitutos-37-animal-on-plane-illustration-thumbnail.png" media="(max-width:320px)">
+        <img src="../assets/images/png-clipart-iconos-cinnamoroll-cinnamoroll-by-minniekawaiitutos-37-animal-on-plane-illustration-thumbnail.png" alt="chinamon">
+    </picture>
+</body>
+</html>
