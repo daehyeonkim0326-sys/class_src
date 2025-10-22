@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+@use "./scss/variables" as *;
+@use "./scss/mixin" as mix;
+
+header{
+    @include mix.row-layout(center);
+    height: 70vh;
+    background-image: url(../logger/image/dl.jpg);
+        nav {
+            background-color: rgba(255,255,255,0.7);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            h1 {
+                background-color: $main-color;
+                padding: $base-padding;
+                }
+            @include mix.row-layout(space-between);
+            .gnb {
+                @include mix.row-layout(space-between);
+                a {
+                    display: flex;
+                    padding: $base-padding;
+                    &:hover {
+                        background-color: $main-color;
+                            }
+                        }
+                    }
+                }
+        .title{
+            background-color: $box-color;
+            padding: $base-padding;
+            border-radius: 0.5rem;
+            color: #fff;
+            text-align: center;
+            h2{
+                font-size: 3rem;
+                letter-spacing: 1rem;
+                }
+            p{
+                text-align: center;
+                }
+            button{
+                display: block;
+                @include mix.pink-btn($btn-color);
+                }
+            }
+        }

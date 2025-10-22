@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Dokdo&display=swap');
+
+body{
+    font-family: $font-main;
+    background-color: #ddd;
+}
+button{ 
+    background-color: $main-color;
+    border-radius: $radius;
+    border: $stroke;
+}
+p{
+    background-color: $sub-color;
+    border-radius: $radius;
+}
+nav{
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        gap: 1rem;
+        > li{
+            margin: 0;
+            a{
+                text-decoration: none;
+                &:hover{
+                    filter: blur(10px);
+                }
+            }
+        }
+    }
+}
+%bth-style{
+    display: inline;
+    border-radius: $radius;
+    padding: 0.5rem 1rem;
+}
+@mixin btn-color($color){
+    display: inline-block;
+    border-radius: $radius;
+    padding: 0.5rem 1rem;
+    background-color: $color;
+}
+.btn-wrap{
+    button{
+        &:nth-child(1){
+            // @extend %bth-style;
+            // background-color: $main-color;
+            @include btn-color($main-color);
+        }
+        &:nth-child(2){
+            @include btn-color($sub-color);
+        }
+        &:nth-child(3){
+            @include btn-color(#f00);
+        }
+    }
+}
