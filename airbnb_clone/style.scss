@@ -389,9 +389,12 @@ header {
     .cover{
       @include mix.tablet{
         width: 20%;
+        @include mix.desktop{
+          width: 15%;
+        }
       }
       img{
-        width: 50%;
+        width: 40%;
         height: auto;
         margin: 5px auto;
         border-radius: 20%;

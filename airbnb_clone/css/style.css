@@ -470,8 +470,13 @@ main > section ul .card3:nth-child(6) .img3 {
     width: 20%;
   }
 }
+@media all and (min-width: 768px) and (min-width: 1200px) {
+  .playbar .cover {
+    width: 15%;
+  }
+}
 .playbar .cover img {
-  width: 50%;
+  width: 40%;
   height: auto;
   margin: 5px auto;
   border-radius: 20%;
