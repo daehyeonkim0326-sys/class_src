@@ -1,0 +1,163 @@
+@charset 'utf-8';
+
+@use "./scss/variation" as *;
+@use "./scss/mixin" as mix;
+
+header{
+    width: 100%;
+    height: 100vh;
+    color: $font-sub;
+    background-repeat: no-repeat;
+    background-image: url(../img/imgi_9_e0a16090-e93f-4863-b18a-cd71c8118b2f.png);
+    background-size: cover;
+    background-position: center;
+    @include mix.tablet{
+        background-image: url(../img/imgi_8_c3e494a1-1814-4bb9-8763-b9d9ae425e18.jpg);   
+    }
+    img{
+        cursor: pointer;
+    }
+    nav{
+        padding: $base-padding;
+        @include mix.flex-layout($justify:space-between);
+        ul {
+            @include mix.flex-layout($justify:space-between);
+            li{
+                cursor: pointer;
+            }
+        }
+
+    }
+    .txt{
+        position: center;
+        text-align: center;
+        margin-top: 35vh;   
+    }
+}
+main{
+    background-color: $main-color;
+    section{
+        padding: $base-padding;
+        @include mix.desktop{
+            @include mix.flex-layout($justify:space-around);
+        }
+        .ct{ 
+            margin: 2rem 0;
+            font-size: 10px;
+            font-weight: 100px;
+            .info{
+                padding: 30px 0;
+            }
+            img{
+                width: 100%;
+                height: 40vh;
+                border-radius: $card-radius;
+            }
+        }
+        .small_ct{
+            .ct2{ 
+                font-size: 8px;
+                font-weight: 100px;
+                .info2{
+                    padding: 30px 0;
+                    .box{
+                        margin: 0.6rem 0;
+                        background-color: $bg-color;
+                        width: 25%;
+                        height: 1rem;
+                        text-align: center;
+                        color: #9c9c9c;
+                    }
+                }
+                img{
+                    width: 100%;
+                    height: 20vh;
+                    border-radius: $card-radius;
+                }
+            }
+            .ct3{ 
+                font-size: 8px;
+                font-weight: 100px;
+                .info2{
+                    padding: 30px 0;
+                    .box{
+                        margin: 0.6rem 0;
+                        background-color: $bg-color;
+                        width: 25%;
+                        height: 1rem;
+                        text-align: center;
+                        color: #9c9c9c;
+                    }
+                }
+                img{
+                    width: 100%;
+                    height: 20vh;
+                    border-radius: $card-radius;
+                }
+            }
+        }
+    }
+        #slide{
+            padding: $base-padding;
+            margin: 2rem 0;
+            display: block;
+            font-size: 10px;
+            @include mix.tablet{
+                font-size:20px;
+            }
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            ul{
+                margin: 2rem 0;
+                transition: transform 0.5s ease-in-out;
+                @include mix.flex-layout($justify:flex-start);
+                li{
+                    h1,p{
+                    text-align: left;
+                }}
+            }
+            img{
+                width: 300px;
+                height: 45vh;
+                object-fit: cover;
+            }
+        }
+        button{
+            border: none;
+            background: none;
+            position: relative;
+            // color: #333;
+            // background-color: #333;
+            p{
+                padding: 10px;
+                font-size: 30px;
+                font-weight: normal;
+            }
+            
+        }
+        #green{
+            width: 93%;
+            background-color: rgb(0, 31, 0);
+            text-align: center;
+            font-size: 10px;
+            color: #fff;
+            overflow: hidden;
+            ul{
+                @include mix.flex-layout($justify:center);
+                img{
+                    position: relative;
+                    width: 400px;
+                    height: 200px;
+                    object-fit: cover;
+                    button{
+                        position: relative;
+                        top: -100px;
+                        transform: translate(50%)
+                        
+                    }
+                }
+            }
+        }
+    
+}

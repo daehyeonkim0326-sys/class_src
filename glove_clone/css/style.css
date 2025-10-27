@@ -1,0 +1,176 @@
+header {
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-image: url(../img/imgi_9_e0a16090-e93f-4863-b18a-cd71c8118b2f.png);
+  background-size: cover;
+  background-position: center;
+}
+@media all and (min-width: 768px) {
+  header {
+    background-image: url(../img/imgi_8_c3e494a1-1814-4bb9-8763-b9d9ae425e18.jpg);
+  }
+}
+header img {
+  cursor: pointer;
+}
+header nav {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+header nav ul li {
+  cursor: pointer;
+}
+header .txt {
+  position: center;
+  text-align: center;
+  margin-top: 35vh;
+}
+
+main {
+  background-color: #fff;
+}
+main section {
+  padding: 2rem 1rem;
+}
+@media all and (min-width: 1024px) {
+  main section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+main section .ct {
+  margin: 2rem 0;
+  font-size: 10px;
+  font-weight: 100px;
+}
+main section .ct .info {
+  padding: 30px 0;
+}
+main section .ct img {
+  width: 100%;
+  height: 40vh;
+  border-radius: 0.1rem;
+}
+main section .small_ct .ct2 {
+  font-size: 8px;
+  font-weight: 100px;
+}
+main section .small_ct .ct2 .info2 {
+  padding: 30px 0;
+}
+main section .small_ct .ct2 .info2 .box {
+  margin: 0.6rem 0;
+  background-color: #ddd;
+  width: 25%;
+  height: 1rem;
+  text-align: center;
+  color: #9c9c9c;
+}
+main section .small_ct .ct2 img {
+  width: 100%;
+  height: 20vh;
+  border-radius: 0.1rem;
+}
+main section .small_ct .ct3 {
+  font-size: 8px;
+  font-weight: 100px;
+}
+main section .small_ct .ct3 .info2 {
+  padding: 30px 0;
+}
+main section .small_ct .ct3 .info2 .box {
+  margin: 0.6rem 0;
+  background-color: #ddd;
+  width: 25%;
+  height: 1rem;
+  text-align: center;
+  color: #9c9c9c;
+}
+main section .small_ct .ct3 img {
+  width: 100%;
+  height: 20vh;
+  border-radius: 0.1rem;
+}
+main #slide {
+  padding: 2rem 1rem;
+  margin: 2rem 0;
+  display: block;
+  font-size: 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+@media all and (min-width: 768px) {
+  main #slide {
+    font-size: 20px;
+  }
+}
+main #slide ul {
+  margin: 2rem 0;
+  transition: transform 0.5s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+main #slide ul li h1, main #slide ul li p {
+  text-align: left;
+}
+main #slide img {
+  width: 300px;
+  height: 45vh;
+  object-fit: cover;
+}
+main button {
+  border: none;
+  background: none;
+  position: relative;
+}
+main button p {
+  padding: 10px;
+  font-size: 30px;
+  font-weight: normal;
+}
+main #green {
+  width: 93%;
+  background-color: rgb(0, 31, 0);
+  text-align: center;
+  font-size: 10px;
+  color: #fff;
+  overflow: hidden;
+}
+main #green ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+main #green ul img {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  object-fit: cover;
+}
+main #green ul img button {
+  position: relative;
+  top: -100px;
+  transform: translate(50%);
+}/*# sourceMappingURL=style.css.map */
