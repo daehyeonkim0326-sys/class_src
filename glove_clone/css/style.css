@@ -12,38 +12,96 @@ header {
     background-image: url(../img/imgi_8_c3e494a1-1814-4bb9-8763-b9d9ae425e18.jpg);
   }
 }
-header img {
-  cursor: pointer;
-}
 header nav {
-  padding: 2rem 1rem;
+  padding: 1rem 0.5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
 }
+header nav .big_menu {
+  display: none;
+  font-size: 12px;
+  width: 70%;
+}
+@media all and (min-width: 768px) {
+  header nav .big_menu {
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+header nav img {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
 header nav ul {
+  width: 60%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   gap: 1rem;
 }
 header nav ul li {
   cursor: pointer;
 }
+header nav ul li button {
+  display: none;
+  cursor: pointer;
+  height: 1.5rem;
+  width: 4rem;
+  color: #fff;
+  font-size: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid;
+  border-color: #fff;
+  border-radius: 0.3rem;
+}
+header nav ul li button:hover {
+  background: rgba(0, 0, 0, 0.5);
+  bottom: start;
+  transition: 0.5s;
+}
+@media all and (min-width: 768px) {
+  header nav ul li button {
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+header nav ul img {
+  width: 50%;
+  height: 50%;
+}
+@media all and (min-width: 768px) {
+  header nav ul .none {
+    display: none;
+  }
+}
 header .txt {
+  font-size: 12px;
   position: center;
   text-align: center;
   margin-top: 35vh;
+}
+header .txt p {
+  font-size: 8px;
 }
 
 main {
   background-color: #fff;
 }
 main section {
-  padding: 2rem 1rem;
+  padding: 1rem 0.5rem;
 }
 @media all and (min-width: 1024px) {
   main section {
@@ -55,21 +113,39 @@ main section {
   }
 }
 main section .ct {
-  margin: 2rem 0;
   font-size: 10px;
+  margin: 2rem 0;
   font-weight: 100px;
 }
 main section .ct .info {
   padding: 30px 0;
+}
+@media all and (min-width: 768px) {
+  main section .ct .info {
+    order: initial;
+    top: 200%;
+    transform: translateY(-200%);
+  }
 }
 main section .ct img {
   width: 100%;
   height: 40vh;
   border-radius: 0.1rem;
 }
+@media all and (min-width: 768px) {
+  main section .ct img {
+    order: initial;
+    top: -50%;
+    transform: translateY(50%);
+  }
+}
+@media all and (min-width: 768px) {
+  main section .ct {
+    margin: 0;
+  }
+}
 main section .small_ct .ct2 {
-  font-size: 8px;
-  font-weight: 100px;
+  font-size: 6px;
 }
 main section .small_ct .ct2 .info2 {
   padding: 30px 0;
@@ -77,9 +153,9 @@ main section .small_ct .ct2 .info2 {
 main section .small_ct .ct2 .info2 .box {
   margin: 0.6rem 0;
   background-color: #ddd;
-  width: 25%;
-  height: 1rem;
   text-align: center;
+  width: 20%;
+  height: 0.6rem;
   color: #9c9c9c;
 }
 main section .small_ct .ct2 img {
@@ -88,7 +164,7 @@ main section .small_ct .ct2 img {
   border-radius: 0.1rem;
 }
 main section .small_ct .ct3 {
-  font-size: 8px;
+  font-size: 6px;
   font-weight: 100px;
 }
 main section .small_ct .ct3 .info2 {
@@ -97,8 +173,8 @@ main section .small_ct .ct3 .info2 {
 main section .small_ct .ct3 .info2 .box {
   margin: 0.6rem 0;
   background-color: #ddd;
-  width: 25%;
-  height: 1rem;
+  width: 20%;
+  height: 0.6rem;
   text-align: center;
   color: #9c9c9c;
 }
@@ -108,17 +184,23 @@ main section .small_ct .ct3 img {
   border-radius: 0.1rem;
 }
 main #slide {
-  padding: 2rem 1rem;
+  padding: 1rem 0.5rem;
   margin: 2rem 0;
-  display: block;
-  font-size: 10px;
-  text-align: center;
-  position: relative;
   overflow: hidden;
+  font-size: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+main #slide .txt1 {
+  font-size: 8px;
+  text-align: center;
 }
 @media all and (min-width: 768px) {
   main #slide {
-    font-size: 20px;
+    font-size: 10px;
   }
 }
 main #slide ul {
@@ -126,35 +208,64 @@ main #slide ul {
   transition: transform 0.5s ease-in-out;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
 }
-main #slide ul li h1, main #slide ul li p {
+main #slide ul li {
   text-align: left;
 }
 main #slide img {
-  width: 300px;
+  width: 250px;
   height: 45vh;
   object-fit: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
-main button {
+main .btn {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+main .btn button {
   border: none;
   background: none;
-  position: relative;
-}
-main button p {
-  padding: 10px;
-  font-size: 30px;
-  font-weight: normal;
 }
 main #green {
-  width: 93%;
-  background-color: rgb(0, 31, 0);
+  background-color: rgb(27, 40, 27);
   text-align: center;
   font-size: 10px;
   color: #fff;
   overflow: hidden;
+  position: relative;
+  height: 300px;
+}
+main #green button {
+  background: none;
+  border: none;
+}
+main #green button.prev {
+  transform: translateY(-50%);
+  position: absolute;
+  left: 20px;
+  top: 60%;
+  color: #adacac;
+}
+main #green button.next {
+  transform: translateY(-50%);
+  position: absolute;
+  right: 20px;
+  top: 60%;
+  color: #adacac;
+}
+main #green .txt {
+  padding: 30px 0;
 }
 main #green ul {
   display: flex;
@@ -164,13 +275,77 @@ main #green ul {
   gap: 1rem;
 }
 main #green ul img {
-  position: relative;
-  width: 400px;
-  height: 200px;
+  width: 260px;
+  height: 160px;
   object-fit: cover;
 }
-main #green ul img button {
+main #ad {
+  padding: 0;
+  background-repeat: no-repeat;
+  font-size: 8px;
   position: relative;
-  top: -100px;
-  transform: translate(50%);
+}
+main #ad img {
+  width: 100%;
+  height: 15vh;
+}
+main #ad .word {
+  padding: 0 1rem;
+  position: absolute;
+  top: 10%;
+  transform: translateZ(-10%);
+  color: #fff;
+}
+main #ad .word button {
+  width: 70px;
+  height: 4vh;
+  position: absolute;
+  top: 150%;
+  transform: translateZ(-150%);
+  font-size: 8px;
+}
+
+#ft {
+  font-size: 10px;
+  width: 100%;
+  height: 35vh;
+  background-color: #ddd;
+}
+#ft .last {
+  padding: 1rem 1rem;
+}
+#ft .menu {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+#ft .small_menu {
+  padding: 0 1rem;
+  font-size: 6px;
+  color: #a4a4a4;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+#ft .icon {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+#ft .icon img {
+  width: 20px;
+  height: auto;
+}
+#ft .h1 {
+  font-size: 6px;
+  color: #a4a4a4;
+  padding: 0 1rem;
 }/*# sourceMappingURL=style.css.map */

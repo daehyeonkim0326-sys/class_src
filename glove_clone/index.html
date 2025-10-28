@@ -11,12 +11,18 @@
     <header>
         <nav>
             <img src="./img/imgi_1_logo_white.svg" alt="logo">
-
+            <ul class="big_menu">
+                <li>What's On</li>
+                <li>Lifestyle</li>
+                <li>Work</li>
+                <li>About</li>
+            </ul>
             <ul>
-                <li>KR</li>
+                <li><button><p>어메니티 예약</p></button></li>
+                <li><h3>KR</h3></li>
                 <li><img src="./img/imgi_3_icon_place_white2.svg" alt="map"></li>
                 <li><img src="./img/imgi_4_icon_search.svg" alt="search"></li>
-                <li><img src="./img/imgi_5_icon_menu.svg" alt="menu"></li>
+                <li class="none"><img src="./img/imgi_5_icon_menu.svg" alt="menu"></li>
             </ul>
         </nav>
         <div class="txt">
@@ -51,14 +57,16 @@
                             <p>Stories of One Grove</p>
                         </div>
                         <h1>라운지엑스, 로봇이 내려주는 가장 맛있는 커피</h1>
-                        <p>라운지엑스는 이런 질문을 품으며 ‘언제나 더 맛있는 커피의 공식을 연구해<br>전파한다’는 미션을 가진 특별한 카페입니다. 일상의 순간마다 새롭게 커피의</p>
+                        <p>라운지엑스는 이런 질문을 품으며 ‘언제나 더 맛있는 커피의 공식을 연구해<br>전파한다’는 미션을 가진 특별한 카페입니다. 일상의 순간마다 새롭게 커피의...</p>
                     </div>
                 </div>
             </div>
         </section>
         <section id="slide">
-            <h1>Walk, shop, eat and drink in One Grove</h1>
-            <p>일도 산책도 쇼핑도 함께, 오직 원그로브에서</p>
+            <div class="txt1">
+                <h1>Walk, shop, eat and drink in One Grove</h1>
+                <p>일도 산책도 쇼핑도 함께, 오직 원그로브에서</p>
+            </div>
             <ul>
                 <li>
                     <img src="./img/imgi_19_68d10817-5b05-4d97-9265-95df64f6ff09.png" alt="list1">
@@ -82,8 +90,10 @@
                     </div>
                 </li>
             </ul>
-            <button class="prew"><P><</P></button>
-            <button class="next"><p>></p></button>
+            <div class="btn">
+                <button class="prew">&lt;</button>
+                <button class="next">&gt;</button>
+            </div>
         </section>           
         <section id="green">
             <div class="txt">
@@ -98,13 +108,41 @@
                     <li><img src="./img/imgi_25_c323f5f7-da05-4e16-8925-ceb86f354757.png" alt="a4"></li>
                     <li><img src="./img/imgi_26_44804675-9158-4906-949b-24d145d3ab6c.png" alt="a5"></li>
                 </ul>
-                <button class="prev"><</button>
-                <button class="next">></button>
+            </div>
+            <button class="prev">&lt;</button>
+            <button class="next">&gt;</button>
+        </section>
+        <section id="ad">
+            <img src="./img/p.png" alt="ad">
+            <div class="word">
+                <div class="txt">
+                    <h3>Enhancing Your Work and Life in One Grove</h3>
+                    <p>지금, 원그로브에서 일상의 가치를 새롭게 만나보세요!</p>
+                </div>
+            <button><p>Plan Your Visit</p></button>
             </div>
         </section>
     </main>
-    <footer>
-
+    <footer id="ft">
+        <div class="last">
+            <h2>One Grove</h2>
+            <p>서울 강서구 공항대로 165</p>
+        </div>
+        <ul class="menu">
+            <li>사이트맵</li>
+            <li>층별안내</li>
+            <li>오시는 길</li>
+            <li>고객서비스</li>
+        </ul>
+        <ul class="small_menu">
+            <li>이용약관</li>
+            <li>개인정보처리방침</li>
+        </ul>
+        <div class="icon">
+            <img src="./img/imgi_31_icon_footer_instagram.svg" alt="insta">
+            <img src="./img/imgi_32_icon_footer_youtube.svg" alt="youtube">
+        </div>
+        <p class="h1">COPYRIGHT © ONE GROVE. ALL RIGHTS RESERVED.</p>
     </footer>
 </body>
 </html>

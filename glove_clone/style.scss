@@ -14,24 +14,72 @@ header{
     @include mix.tablet{
         background-image: url(../img/imgi_8_c3e494a1-1814-4bb9-8763-b9d9ae425e18.jpg);   
     }
-    img{
-        cursor: pointer;
-    }
     nav{
         padding: $base-padding;
         @include mix.flex-layout($justify:space-between);
-        ul {
-            @include mix.flex-layout($justify:space-between);
-            li{
-                cursor: pointer;
+        .big_menu{
+            display: none;
+            font-size: 12px;
+            width: 70%;
+            @include mix.tablet{
+                display: flex;
+                @include mix.flex-layout($justify:flex-start);
+
             }
         }
-
+        img{
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+        }
+        ul {
+            width: 60%;
+            li{               
+                cursor: pointer;
+                button{
+                    display: none;
+                    cursor: pointer;
+                    height: 1.5rem;
+                    width: 4rem;
+                    color: #fff;
+                    font-size: 8px;
+                    background: rgba(0, 0, 0, 0.1);
+                    border: 1px solid;
+                    border-color: #fff;
+                    border-radius: 0.3rem;
+                    &:hover{
+                        background: rgba(0, 0, 0, 0.5);
+                        bottom:start;
+                        transition: 0.5s;
+                    }
+                    @include mix.tablet{
+                        display: flex;
+                        @include mix.flex-layout($justify:center);
+                    }
+                }
+            }
+            img{
+                width: 50%;
+                height: 50%;
+                
+            }
+            .none{
+                @include mix.tablet{
+                    display: none;
+                }
+            }
+            @include mix.flex-layout($justify:flex-end);
+        }
+        
     }
     .txt{
+        font-size: 12px;
         position: center;
         text-align: center;
-        margin-top: 35vh;   
+        margin-top: 35vh;
+        p{
+            font-size: 8px;
+        }   
     }
 }
 main{
@@ -40,32 +88,45 @@ main{
         padding: $base-padding;
         @include mix.desktop{
             @include mix.flex-layout($justify:space-around);
+
         }
         .ct{ 
-            margin: 2rem 0;
             font-size: 10px;
+            margin: 2rem 0;
             font-weight: 100px;
             .info{
                 padding: 30px 0;
+                @include mix.tablet{
+                    order: initial;
+                    top: 200%;
+                    transform: translateY(-200%);
+                }
             }
             img{
                 width: 100%;
                 height: 40vh;
                 border-radius: $card-radius;
+                @include mix.tablet{
+                    order: initial;
+                    top: -50%;
+                    transform: translateY(50%);
+                }
             }
+             @include mix.tablet{
+                    margin:0;
+                }
         }
         .small_ct{
             .ct2{ 
-                font-size: 8px;
-                font-weight: 100px;
+                font-size: 6px;
                 .info2{
                     padding: 30px 0;
                     .box{
                         margin: 0.6rem 0;
                         background-color: $bg-color;
-                        width: 25%;
-                        height: 1rem;
                         text-align: center;
+                        width: 20%;                        
+                        height: 0.6rem;
                         color: #9c9c9c;
                     }
                 }
@@ -76,15 +137,15 @@ main{
                 }
             }
             .ct3{ 
-                font-size: 8px;
+                font-size: 6px;
                 font-weight: 100px;
                 .info2{
                     padding: 30px 0;
                     .box{
                         margin: 0.6rem 0;
                         background-color: $bg-color;
-                        width: 25%;
-                        height: 1rem;
+                        width: 20%;                        
+                        height: 0.6rem;
                         text-align: center;
                         color: #9c9c9c;
                     }
@@ -100,64 +161,138 @@ main{
         #slide{
             padding: $base-padding;
             margin: 2rem 0;
-            display: block;
-            font-size: 10px;
-            @include mix.tablet{
-                font-size:20px;
-            }
-            text-align: center;
-            position: relative;
             overflow: hidden;
+            font-size: 8px;
+            // display: block;
+            .txt1{
+            font-size: 8px;
+            text-align: center;
+            }
+            @include mix.flex-layout($direction:column,$justify:center,$align:flex-start);
+            @include mix.tablet{
+                font-size: 10px;
+            }
             ul{
                 margin: 2rem 0;
                 transition: transform 0.5s ease-in-out;
-                @include mix.flex-layout($justify:flex-start);
+                @include mix.flex-layout($justify:center);
                 li{
-                    h1,p{
                     text-align: left;
-                }}
+                }
             }
             img{
-                width: 300px;
+                width: 250px;
                 height: 45vh;
                 object-fit: cover;
+                @include mix.flex-layout();
             }
         }
-        button{
+        .btn{
+            width: 100%;
+            button{
             border: none;
             background: none;
-            position: relative;
-            // color: #333;
-            // background-color: #333;
-            p{
-                padding: 10px;
-                font-size: 30px;
-                font-weight: normal;
             }
+            @include mix.flex-layout($direction:row,$align:center);
             
         }
-        #green{
-            width: 93%;
-            background-color: rgb(0, 31, 0);
+        #green{           
+            background-color: rgb(27, 40, 27);
             text-align: center;
             font-size: 10px;
             color: #fff;
-            overflow: hidden;
-            ul{
-                @include mix.flex-layout($justify:center);
-                img{
-                    position: relative;
-                    width: 400px;
-                    height: 200px;
-                    object-fit: cover;
-                    button{
-                        position: relative;
-                        top: -100px;
-                        transform: translate(50%)
-                        
-                    }
+            overflow: hidden;          
+            position: relative;                
+            height: 300px;
+            button{
+                background: none;
+                border: none;
+                &.prev{
+                    transform: translateY(-50%);
+                    position: absolute;
+                    left: 20px;
+                    top: 60%;
+                    color: #adacac;
+                }
+                &.next{
+                    transform: translateY(-50%);
+                    position: absolute;
+                    right: 20px;
+                    top: 60%;
+                    color: #adacac;
                 }
             }
+            .txt{
+                padding: 30px 0;
+            }
+            ul{ 
+                img{
+                    width: 260px;
+                    height: 160px;
+                    object-fit: cover;
+                }
+                @include mix.flex-layout($justify:center);
+            }
         }
+        #ad{
+            padding: 0;
+            background-repeat: no-repeat;
+            font-size: 8px;
+            position: relative;
+            img{
+                width: 100%;
+                height: 15vh;
+            }
+            .word{
+                padding: 0 1rem;
+                position: absolute;
+                top: 10%;
+                transform: translateZ(-10%);
+                color: #fff;
+                button{
+                    width: 70px;
+                    height: 4vh;
+                    position: absolute;
+                    top: 150%;
+                    transform: translateZ(-150%);
+                    font-size: 8px;
+                }
+            }
+
+        }
+}
+            
+#ft{
+    font-size: 10px;
+    width: 100%;
+    height: 35vh;
     
+    background-color: #ddd;
+    .last{
+        // @include mix.flex-layout($justify:space-around);
+        padding: 1rem 1rem;
+    }
+    .menu{
+        padding: 1rem;
+        @include mix.flex-layout($justify:flex-start);
+    }
+    .small_menu{
+        padding: 0 1rem;
+        font-size: 6px;
+        color: #a4a4a4;
+        @include mix.flex-layout($justify:flex-start);
+    }
+    .icon{
+        img{
+            width: 20px;
+            height: auto;
+        }
+        padding: 1rem;
+        @include mix.flex-layout($justify:flex-start);
+    }
+    .h1{
+        font-size: 6px;
+        color: #a4a4a4;
+        padding: 0 1rem;
+    }
 }
