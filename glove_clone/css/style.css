@@ -89,7 +89,6 @@ header nav ul img {
 }
 header .txt {
   font-size: 12px;
-  position: center;
   text-align: center;
   margin-top: 35vh;
 }
@@ -102,53 +101,103 @@ main {
 }
 main section {
   padding: 1rem 0.5rem;
+  font-size: 8px;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 768px) {
   main section {
+    position: relative;
+    height: 80vh;
+    font-size: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
   }
 }
 main section .ct {
-  font-size: 10px;
-  margin: 2rem 0;
-  font-weight: 100px;
-}
-main section .ct .info {
-  padding: 30px 0;
-}
-@media all and (min-width: 768px) {
-  main section .ct .info {
-    order: initial;
-    top: 200%;
-    transform: translateY(-200%);
-  }
-}
-main section .ct img {
-  width: 100%;
-  height: 40vh;
-  border-radius: 0.1rem;
-}
-@media all and (min-width: 768px) {
-  main section .ct img {
-    order: initial;
-    top: -50%;
-    transform: translateY(50%);
-  }
+  padding: 1rem 0;
+  font-weight: auto;
 }
 @media all and (min-width: 768px) {
   main section .ct {
-    margin: 0;
+    position: absolute;
+    left: 5%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+@media all and (min-width: 1024px) {
+  main section .ct {
+    position: absolute;
+    left: 20%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+main section .ct .info {
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+@media all and (min-width: 768px) {
+  main section .ct .info {
+    order: unset;
+    top: 10%;
+    object-fit: fill;
+  }
+}
+main section .ct .img {
+  overflow: hidden;
+}
+main section .ct .img img {
+  cursor: pointer;
+  width: 100%;
+  height: 40vh;
+  border-radius: 0.1rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  transition: 0.5s;
+}
+main section .ct .img img:hover {
+  transform: scale(1.1);
+}
+@media all and (min-width: 768px) {
+  main section .ct .img img {
+    padding: 1rem 0;
+    width: 100%;
+    height: 60vh;
+  }
+}
+@media all and (min-width: 768px) {
+  main section .small_ct {
+    position: absolute;
+    top: 88%;
+    right: 5%;
+    transform: translateY(-88%);
+    aspect-ratio: 1/1;
+  }
+}
+@media all and (min-width: 1024px) {
+  main section .small_ct {
+    position: absolute;
+    top: 88%;
+    right: 20%;
+    transform: translateY(-88%);
+    aspect-ratio: 1/1;
   }
 }
 main section .small_ct .ct2 {
   font-size: 6px;
 }
 main section .small_ct .ct2 .info2 {
-  padding: 30px 0;
+  cursor: pointer;
+  padding: 1rem 0;
 }
 main section .small_ct .ct2 .info2 .box {
   margin: 0.6rem 0;
@@ -158,17 +207,34 @@ main section .small_ct .ct2 .info2 .box {
   height: 0.6rem;
   color: #9c9c9c;
 }
-main section .small_ct .ct2 img {
+@media all and (min-width: 768px) {
+  main section .small_ct .ct2 .info2 .box {
+    width: 30%;
+  }
+}
+main section .small_ct .ct2 .img {
+  overflow: hidden;
+}
+main section .small_ct .ct2 .img img {
+  cursor: pointer;
   width: 100%;
-  height: 20vh;
+  height: 15vh;
   border-radius: 0.1rem;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  object-fit: cover;
+  transition: 0.5s;
+}
+main section .small_ct .ct2 .img img:hover {
+  scale: 1.1;
 }
 main section .small_ct .ct3 {
   font-size: 6px;
   font-weight: 100px;
 }
 main section .small_ct .ct3 .info2 {
-  padding: 30px 0;
+  cursor: pointer;
+  padding: 1rem 0;
 }
 main section .small_ct .ct3 .info2 .box {
   margin: 0.6rem 0;
@@ -178,10 +244,26 @@ main section .small_ct .ct3 .info2 .box {
   text-align: center;
   color: #9c9c9c;
 }
-main section .small_ct .ct3 img {
+@media all and (min-width: 768px) {
+  main section .small_ct .ct3 .info2 .box {
+    width: 30%;
+  }
+}
+main section .small_ct .ct3 .img {
+  overflow: hidden;
+}
+main section .small_ct .ct3 .img img {
+  cursor: pointer;
   width: 100%;
-  height: 20vh;
+  height: 15vh;
   border-radius: 0.1rem;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  object-fit: cover;
+  transition: 0.5s;
+}
+main section .small_ct .ct3 .img img:hover {
+  scale: 1.1;
 }
 main #slide {
   padding: 1rem 0.5rem;
@@ -194,9 +276,20 @@ main #slide {
   align-items: flex-start;
   gap: 1rem;
 }
+@media all and (min-width: 768px) {
+  main #slide {
+    height: 90vh;
+  }
+}
 main #slide .txt1 {
+  width: 100%;
   font-size: 8px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 @media all and (min-width: 768px) {
   main #slide {
@@ -215,15 +308,24 @@ main #slide ul {
 main #slide ul li {
   text-align: left;
 }
-main #slide img {
+@media all and (min-width: 768px) {
+  main #slide ul {
+    width: 100%;
+  }
+}
+main #slide .img {
+  overflow: hidden;
+}
+main #slide .img img {
+  cursor: pointer;
   width: 250px;
   height: 45vh;
   object-fit: cover;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+  overflow: hidden;
+  transition: 0.5s;
+}
+main #slide .img img:hover {
+  scale: 1.1;
 }
 main .btn {
   width: 100%;
@@ -234,6 +336,7 @@ main .btn {
   gap: 1rem;
 }
 main .btn button {
+  cursor: pointer;
   border: none;
   background: none;
 }
@@ -245,24 +348,51 @@ main #green {
   overflow: hidden;
   position: relative;
   height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+@media all and (min-width: 768px) {
+  main #green {
+    height: 500px;
+    font-size: 12px;
+  }
 }
 main #green button {
   background: none;
   border: none;
 }
 main #green button.prev {
-  transform: translateY(-50%);
+  cursor: pointer;
   position: absolute;
+  transform: translateY(-78%);
   left: 20px;
-  top: 60%;
+  top: 68%;
   color: #adacac;
 }
+@media all and (min-width: 768px) {
+  main #green button.prev {
+    transform: translateY(-50%);
+    left: 20px;
+    top: 60%;
+  }
+}
 main #green button.next {
-  transform: translateY(-50%);
+  cursor: pointer;
   position: absolute;
+  transform: translateY(-78%);
   right: 20px;
-  top: 60%;
+  top: 68%;
   color: #adacac;
+}
+@media all and (min-width: 768px) {
+  main #green button.next {
+    transform: translateY(-50%);
+    right: 20px;
+    top: 60%;
+  }
 }
 main #green .txt {
   padding: 30px 0;
@@ -274,56 +404,151 @@ main #green ul {
   align-items: center;
   gap: 1rem;
 }
-main #green ul img {
+main #green ul .img2 {
+  overflow: hidden;
+}
+main #green ul .img2 img {
   width: 260px;
   height: 160px;
   object-fit: cover;
+  overflow: hidden;
+  transition: 0.5s;
 }
-main #ad {
+main #green ul .img2 img:hover {
+  scale: 1.1;
+}
+@media all and (min-width: 768px) {
+  main #green ul .img2 img {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+#ad {
+  cursor: pointer;
   padding: 0;
   background-repeat: no-repeat;
   font-size: 8px;
   position: relative;
 }
-main #ad img {
+@media all and (min-width: 768px) {
+  #ad {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+#ad img {
   width: 100%;
   height: 15vh;
 }
-main #ad .word {
+#ad .word {
   padding: 0 1rem;
   position: absolute;
   top: 10%;
   transform: translateZ(-10%);
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
 }
-main #ad .word button {
+@media all and (min-width: 768px) {
+  #ad .word {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    top: 25%;
+    transform: translateZ(-25%);
+    width: 97%;
+  }
+}
+#ad .word .txt {
+  position: relative;
+}
+@media all and (min-width: 768px) {
+  #ad .word .txt {
+    font-size: 12px;
+  }
+}
+#ad .word button {
   width: 70px;
   height: 4vh;
-  position: absolute;
+  position: relative;
   top: 150%;
   transform: translateZ(-150%);
   font-size: 8px;
 }
+#ad .word button:hover {
+  background-color: #333;
+  border: #333;
+  color: #fff;
+}
+@media all and (min-width: 768px) {
+  #ad .word button {
+    right: 0;
+    top: 100%;
+    transform: translateZ(-100%);
+  }
+}
 
 #ft {
+  padding: 10px;
   font-size: 10px;
-  width: 100%;
   height: 35vh;
   background-color: #ddd;
+}
+@media all and (min-width: 1024px) {
+  #ft {
+    height: 25vh;
+  }
 }
 #ft .last {
   padding: 1rem 1rem;
 }
-#ft .menu {
+#ft .last h2 {
+  cursor: pointer;
+}
+@media all and (min-width: 1024px) {
+  #ft .last {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+#ft .LR {
   padding: 1rem;
+}
+@media all and (min-width: 1024px) {
+  #ft .LR {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+#ft .LR .left .menu {
+  padding: 1rem 0;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
 }
-#ft .small_menu {
-  padding: 0 1rem;
+#ft .LR .left .menu li {
+  cursor: pointer;
+}
+#ft .LR .left .small_menu {
   font-size: 6px;
   color: #a4a4a4;
   display: flex;
@@ -332,20 +557,42 @@ main #ad .word button {
   align-items: center;
   gap: 1rem;
 }
-#ft .icon {
-  padding: 1rem;
+#ft .LR .left .small_menu li {
+  cursor: pointer;
+}
+#ft .LR .right .icon {
+  width: 100%;
+  padding: 1rem 0;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
 }
-#ft .icon img {
+#ft .LR .right .icon img {
+  cursor: pointer;
   width: 20px;
   height: auto;
 }
-#ft .h1 {
+@media all and (min-width: 1024px) {
+  #ft .LR .right .icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+#ft .LR .right .h1 {
   font-size: 6px;
   color: #a4a4a4;
-  padding: 0 1rem;
+}
+@media all and (min-width: 1024px) {
+  #ft .LR .right .h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    gap: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */
