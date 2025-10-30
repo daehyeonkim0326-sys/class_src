@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 스타일</title>
+    <style>
+        body > *{
+            width: 150px;
+            background-color: aquamarine;
+        }
+        .ex1{ white-space: normal;}
+        .ex2{ 
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .ex3{ white-space: pre;}
+        .space{ letter-spacing: 10px;}
+        .word{ word-spacing: 20px;}
+    </style>
+</head>
+<body>
+    <p class="ex1">여기는            공백이               많지만             normal</p>
+    <p class="ex2">이건 nowrap 줄 바뀜 안됨</p>
+    <p class="ex3">
+        이건
+        pre처럼
+        줄바꿈이 
+        그대로 
+    </p>
+    <P class="space">레터 & 워드 스페이싱</P>
+    <P class="word">레터 & 워드 스페이싱</P>
+</body>
+</html>

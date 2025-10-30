@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css주요 선택자</title>
+    <style>
+        /* 내부 스타일 시트: 스타일 태그에 작성 */
+        p{
+            color: blue;
+        }
+        /* .highlight {
+            color: #f00;
+            font-weight: bolder;
+        } */
+        /* #main p{
+            color: #0f0;
+        } */
+         #main{
+            >p{
+                color: #0f0;
+            }
+         }
+         span{
+            text-decoration: none;
+         }
+    </style>
+</head>
+<body>
+    <p>1.파란색 기본 p태그</p>
+    <div id="main">
+        <P class="highlight">2.메인안에 p->빨간색+굵게</P>
+        <div>
+            <p>3.메인안에 div안에 p->초록   색</p>
+            <span>4.메인 안에 div 안에 span ->밑줄</span>
+        </div>
+    </div>
+</body>
+</html>

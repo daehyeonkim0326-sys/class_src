@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display flex</title>
+    <style>
+        *{margin: 0; padding: 0;}
+
+        ul{
+            list-style: none;
+            /* padding-left: 40px; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 50%;
+            height: 50vh;
+            background-color: #ddd;
+        }
+        ul>li{
+            background-color: tomato;
+            border: 1px solid #100;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>menu-1</li>
+        <li>menu-2</li>
+        <li>menu-3</li>
+        <li>menu-4</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 700px;
+    gap: 30px;
+}
+.book-img{
+    width: 300px;
+    height: 500px;
+    position: relative;
+    /* transform: rotateY(0.5deg); */
+    transform-style: preserve-3d;
+    transition: 0.5s;
+}
+.left{
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.book-img.flipped{
+    transform: rotateY(189deg);
+}
+.book-img:not(.flipped):hover{
+    transform: rotateY(40deg);
+    cursor: url(../image/arow-2.png), auto;
+}
+.txt{
+    height: 500px;
+    width: 500px;
+    display: block;
+    justify-content: left;
+    align-items: center;
+    font-size: 20px;
+}
+.info{
+    display: block;
+    text-align: left;
+    line-height: 50px;
+}
+.move{
+    background-color: blueviolet;
+    display: inline-block;
+    animation: movingtxt 1s linear 1s infinite alternate;
+}
+.page{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+.page > img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility:hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.front{
+    background-color: dodgerblue;
+    transform: translateZ(35px);
+}
+.back{
+    background-color: aqua;
+    transform: translateZ(-35px) rotateY(180deg);
+}
+.side{
+    background-color: blueviolet;
+    width: 70px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -35px;
+    transform: rotateY(-90deg);
+}
+@keyframes movingtxt {
+        100%{
+                background-color: aqua;
+                transform: translateX(300px);
+                opacity: 0;
+            }
+}

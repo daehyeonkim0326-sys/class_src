@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+    #container>div{
+        background-color: tomato;
+        border: 1px solid #00f;
+        text-align: center;
+    }
+    #container{
+        height: 5vh;
+        background-color: #ddd;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        /* 주축에 대한 정렬 */
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    #container > div:nth-child(even){
+        font-size: 40px;
+    }
+    #container > div:nth-child(3){
+        font-size: 32px;
+    }
+    #container > div:nth-child(1){
+        order: -2;
+
+}
+    #container >div:nth-child(5){
+        align-self: flex-end;
+        order: -1;
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>box1</div>
+        <div>box2</div>
+        <div>box3</div>
+        <div>box4</div>
+        <div>box5</div>
+        <div>box6</div>
+    </div>
+</body>
+</html>

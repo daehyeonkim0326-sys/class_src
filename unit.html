@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단위</title>
+    <style>
+        /* 고정 : px, 가변 : vh, vw, em, rem, % */
+        html{
+            font-size: 10px;
+        }
+        body{
+            font-size: 20px;
+        }
+        .root{
+            background-color: brown;
+            /* width: 50vw; */
+            width: 50%;
+        }
+        .sub{
+            background-color: azure;
+            /* width: 50vw; */
+            width: 50%;
+        }
+        .sub > p {
+            font-size: 2rem; /*1em =부모 사이즈 1rem=root */
+        }
+    </style>
+</head>
+<body>
+    <div class="root">
+        <p>1. 폰트 사이즈 확인</p>
+        <div class="sub">
+            <p>2. sub 폰트 사이즈</p>
+        </div>
+    </div>
+</body>
+</html>

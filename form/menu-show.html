@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu 보기</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{
+            width: 50px;
+            height: 80px;
+            background-color: #ddd;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        ul > li {
+            height: 2px;
+            background-color: #222;
+        }
+        nav{
+            width: 100px;
+            height: 500px;
+            background-color: antiquewhite;
+            display: none;
+            /* opacity: 0; */
+            /* visibility: hidden; */
+        }
+        label{ display: block;}
+        input[type="checkbox"]{
+            display: none;
+        }
+        /* input[type="checkbox"]:checked + nav{
+            display: block;
+        } */
+        input[type="checkbox"]:checked ~ nav{
+            display: block;
+            /* opacity: 1; */
+            /* visibility: visible; */
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="menu">
+    <label for="menu">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </label>
+    <!-- <input type="checkbox" id="menu"> -->
+    <nav>
+        <h1>메뉴</h1>
+    </nav>
+</body>
+</html>

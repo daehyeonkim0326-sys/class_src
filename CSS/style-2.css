@@ -1,0 +1,30 @@
+@charset 'utf-8';
+*{
+    /* background-color: tomato; */
+   b    margin: 0;
+    padding: 0;
+}
+/* #container{
+    background-color: #ddd ;
+    }>.item{
+        color: #00f;
+    } */
+    div{
+        > p.item{
+            color: rgb(217, 155, 10);
+        }
+    }
+    .item{
+        font-weight: bolder;
+    }
+    /* #container >.item{
+        color: #00f;
+    } */
+     .section > .item{
+        color:#000;
+     }
+     h1,h2{
+        color: tomato;
+        -webkit-text-stroke: ;
+     }
+    

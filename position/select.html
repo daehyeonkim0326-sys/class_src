@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select</title>
+    <style>  
+        :root{
+            --color-head: #f0f;
+            --size-font: 40px
+        }
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        main > p{
+            text-decoration: underline;
+            color: var(--color-head);
+            font-size: var(--size-font);
+        }
+        nav a{
+            text-decoration: none;
+            color: green;
+        }
+        .layout-inline{
+            display: inline-block;
+            padding: 0.5rem 1rem;
+        }
+        .font-bg{
+            background-color: tomato;
+        }
+        nav li:hover{
+            background-color: bisque;
+        }
+        body > p:nth-of-type(1){
+            background-color: #00f;
+        }
+        /* nav li:nth-of-type(2){
+            background-color: #0f0;
+        } */
+        nav li:nth-child(2n+1){
+            background-color: #f0f;
+        }
+        nav li:nth-child(2n){
+            background-color: aqua;
+        }
+        nav li:nth-child(3n){
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <header>제목</header>
+    <p>제목을 설명을 기재합니다.</p>
+    <nav>
+        <ul>
+            <li class="layout-inline font-bg"><a href="#">메뉴1</a></li>
+            <li class="layout-inline"><a href="#">메뉴2</a></li>
+            <li class="layout-inline"><a href="#">메뉴3</a></li>
+            <li class="layout-inline"><a href="#">메뉴4</a></li>
+            <li class="layout-inline"><a href="#">메뉴5</a></li>
+            <li class="layout-inline"><a href="#">메뉴6</a></li>
+            <li class="layout-inline"><a href="#">메뉴7</a></li>
+            <li class="layout-inline"><a href="#">메뉴8</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>본문</h1>
+        <p>본문에 설명을 작성합니다.</p>
+        <ul>
+            <li><img src="../assets/images/image-1.jpg" alt="이미지1"></li>
+            <li><img src="../clone/image/푸터.png" alt="이미지2"></li>
+            <li><img src="../clone/image/edu-01.png" alt="이미지3"></li>
+        </ul>
+    </main>
+    <footer>푸터</footer>
+</body>
+</html>

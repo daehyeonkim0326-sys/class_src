@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float 속성</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: tomato;
+            float: right;
+        }
+        main{
+            /* display: flex; */
+        }
+        .box2{
+            width: 30px;
+            height: 30px;
+            background-color: blue;
+            float: left;
+        }
+        .txt{
+            clear: right;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="box"></div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iure maiores, nam quisquam deleniti corrupti soluta accusamus minus corporis accusantium, illum neque maxime exercitationem perferendis aspernatur, vitae delectus enim tenetur?
+        </p>
+    </main>
+    <div class="box2"></div>
+    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+</body>
+</html>
