@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imgprev,next</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        main{
+            width: 300px;
+            margin: 3rem auto;
+            position: relative;
+            img{
+                width: 100%;
+            }
+            .btn-wrap{
+                button{
+                position: absolute;
+                transform: translate(-50%);
+                &.prev{left: -1.2rem;}
+                &.next{right: -3rem;}
+                top: 50%;
+            }
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <img src="./image/img-01.png" alt="1-img">
+        <div class="btn-wrap">
+            <button class="prev">이전</button>
+            <button class="next">다음</button>
+        </div>
+    </main>
+    <script src="./dom-3.js">
+
+    </script>
+</body>
+</html>
