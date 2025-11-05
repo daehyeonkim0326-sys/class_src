@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 생성,삽입,삭제</title>
+</head>
+<body>
+    <main>
+        <button class="add">요소추가</button>
+        <!-- <button>클릭</button> -->
+        <!-- <ul>
+            <li>LIST1</li>
+            <li>LIST3</li>
+            <li>LIST3</li>
+        </ul> -->
+        <button class="del">요소삭제</button>
+    </main>
+    <script>
+        const addbt =document.querySelector('.add');
+        const delbt = document.querySelector('.del')
+        const mElem =document.querySelector('main');
+        addbt.onclick =()=>{
+            const btn = document.createElement('button');
+            console.log( btn );
+            btn.textContent = '클릭';
+            mElem.append(btn);
+            const ul = document.createElement('ul');
+            for (let i=0 ; i<3 ; i++){
+                const li = document.createElement('li');
+                li.textContent = `LIST${i}`;
+                ul.append(li);
+            }
+            mElem.after(ul);
+            /*
+            요소를 생성 createElement
+            맨 뒤에 추가 append
+            맨 앞에 추가 prepend
+            요소 앞/뒤에 추가 before()/after()
+            정확한 위치에 넣는 insertAdjacentHTML()*요즘에는 잘 쓰지 않음!!
+            */
+            const pElem = document.createElement('p');
+            pElem.textContent = 'p태그 생성 추가';
+            // mElem.prepend(pElem);
+            // mElem.after(pElem);
+            mElem.before(pElem);
+            
+        }
+        delbt.onclick =()=>{
+            const pe =document.querySelector('p');
+            pe.remove(); 
+        }
+    </script>
+</body>
+</html>

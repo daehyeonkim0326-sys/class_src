@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쇼핑</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{
+            
+            li{
+                margin: 1rem;
+                padding: 1rem;
+                display: flex;
+                justify-content: flex-start;
+                p{
+                    padding: 0 1rem;
+                }
+            }
+        }
+        .hide{display: none;}
+    </style>
+</head>
+<body>
+    <h1>ABC쇼핑물</h1>
+    <ul class="add">
+        <li><p>상품 A (￦10000)</p><button>장바구니 추가</button></li>
+        <li><p>상품 B (￦15000)</p><button>장바구니 추가</button></li>
+        <li><p>상품 C (￦40000)</p><button>장바구니 추가</button></li>
+        <li><p>상품 D (￦20000)</p><button>장바구니 추가</button></li>
+        <li><p>상품 E (￦35000)</p><button>장바구니 추가</button></li>
+    </ul>
+    <h1>장바구니</h1>
+    <!-- <ul class="del">
+        <li><p>상품 A (￦10000)</p><button>삭제</button></li>
+        <li><p>상품 B (￦15000)</p><button>삭제</button></li>
+        <li><p>상품 C (￦40000)</p><button>삭제</button></li>
+        <li><p>상품 D (￦20000)</p><button>삭제</button></li>
+        <li><p>상품 E (￦35000)</p><button>삭제</button></li>
+    </ul> -->
+    <h1>총 가격 : 00000</h1>
+    <script>
+        const AE = document.querySelectorAll('.add>li button');
+        const DE = document.querySelectorAll('.del>li button');
+
+        AE.onclick =()=>{
+            
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>use dataset</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        ul{
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            li{
+                border-radius: 2rem;
+                overflow: hidden;
+                width: 200px;
+                aspect-ratio: 2/3;
+                position: relative;
+                div{
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                }
+                div.bg{
+                    top: 0;
+                    height: 100%;
+                    background-size: cover;
+                    background-position: center;
+                }
+                div.txt{
+                    bottom: 0;
+                    padding: 1rem;
+                    background-color: rgba(255, 255, 255, 0.6);
+                }
+            }
+            li:nth-child(1) >.bg{
+                background-image: url(./image/img-01.png);
+                
+            }
+            li:nth-child(2) >.bg{
+                background-image: url(./image/m4.jpg);
+                
+            }
+            li:nth-child(3) >.bg{
+                background-image: url(./image/다운로드.jpg);
+                
+            }
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <div class="bg"></div>
+            <div class="txt">
+                <p>1번 이미지 설명</p>
+                <button data-counter="0">
+                    <span class="counter">0</span>
+                    좋아요
+                </button>
+            </div>
+        </li>
+        <li>
+            <div class="bg"></div>
+            <div class="txt">
+                <p>2번 이미지 설명</p>
+                <button data-counter="0">
+                    <span class="counter">20000</span>
+                    좋아요
+                </button>
+            </div>
+        </li>
+        <li>
+            <div class="bg"></div>
+            <div class="txt">
+                <p>3번 이미지 설명</p>
+                <button data-counter="0">
+                    <span class="counter">0</span>
+                    좋아요
+                </button>
+            </div>
+        </li>
+    </ul>
+    <div class="detail">
+        <button data-status="on">설정 보기</button>
+        <div class="txt">
+            <p>설정 내용을 확인합니다</p>
+            <p>내용 확인 후 보기 닫기를 합니다</p>
+        </div>
+    </div>
+    <script>
+        // const btnElem=document.querySelector('ul>li:nth-child(1) button');
+        // console.log(btnElem);
+        // btnElem.onclick =()=>{
+        //     let count = Number(btnElem.dataset.counter)+1;
+        //     btnElem.dataset.counter = count;
+        //     // const spanElem = btnElem.children[0];
+        //     const spanElem = btnElem.childNodes[1];
+        //     spanElem.textContent = count;
+        //     }
+        const btnElem = document.querySelectorAll('ul>li button');
+        for(let i=0 ; i<btnElem.length ; i++){
+        btnElem[i].onclick =()=>{
+            let count=Number(btnElem[i].dataset.counter);
+            count++;
+            btnElem[i].dataset.counter=count;
+            btnElem[i].children[0].textContent = count;
+        }
+    }
+    const btElem = document.querySelector('.detail>button');
+    const detxt = document.querySelector('.detail>.txt');
+    let status = btElem.dataset.status;
+    btElem.onclick=()=>{
+    if( status === 'on'){
+        btElem.dataset.status ='off';
+        detxt.classList.add('hide');
+        detxt.textContent = '설정 보기';
+    } else {
+        btElem.dataset.status='on';
+        detxt.classList.remove('hide');
+        detxt.textContent ='설정 닫기';
+    }
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class list 활용</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        a{text-decoration: none; color: inherit; display: block;}
+        ul{list-style: none;
+            li{
+                padding: 0.5rem 1rem;
+            }
+        }
+        nav{
+            width: 200px;
+            height: 100vh;
+            background-color: #ddd;
+            position: fixed;
+            top: 0;
+            left: -200px;
+            transition: 1s;
+        }
+        .menu-btn{
+            cursor: pointer;
+            position: fixed;
+            border: 1px solid gray;
+            border-style: ridge;
+            border-radius: 0.5rem;
+            background-color:rgba(0, 0, 0, 0.1) ;
+            top: 0;
+            left: 0px;
+            transition: 1s;
+        }
+        .open > .menu-btn{
+            left: 200px;
+            
+        }
+        .open > nav{
+            left: 0;
+            
+        }
+        .light{
+            text-align: right;
+            padding: 1rem;
+            height: 100vh;
+            box-sizing: border-box;
+            background-color: #eee;
+            color: #222;
+        }
+        .dark{
+            background-color: #222;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="open">
+    <main class="light ">L</main>
+    <button class="menu-btn">메뉴</button>
+    <nav>
+        <ul>
+            <li><a href="#">Theme</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Dose</a></li>
+        </ul>
+    </nav>
+    <script>
+        const btnElem = document.querySelector('.menu-btn');
+        console.log(btnElem);
+        btnElem.onclick =()=>{
+            document.body.classList.toggle('open');
+
+        }
+        const L = document.querySelector('ul>li>a:nth-child(1)');
+        L.onclick =()=>{
+            const M = document.querySelector('menu-btn');
+            const mainElem = document.querySelector('main');
+            mainElem.classList.toggle('dark');
+            if( mainElem.textContent==='L'){
+                mainElem.textContent ='D';
+            }else{
+                mainElem.textContent='L';
+            }
+        }
+    </script>
+</body>
+</html>
