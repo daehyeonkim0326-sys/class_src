@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 동작 차단</title>
+</head>
+<body>
+    <a href="https://www.naver.com" id="link">naver</a>
+    <form>
+        <label>
+            <span>검색어 입력:</span>
+        <input type="text">
+        </label>
+        <input type="submit">
+    </form>
+    <ul>
+        <li>메뉴-1</li>
+        <li>메뉴-2</li>
+        <li>메뉴-3</li>
+    </ul>
+    <script>
+        const $link = document.querySelector('#link');
+        $link.addEventListener('click',(event)=>{
+            event.preventDefault(); //기본 기능을 없애버리는 기능
+            alert('팝업창을 띄움니다.');
+        });
+        //폼에서 일어나는  submit 이벤트를 중단
+        const $form = document.querySelector('form');
+        $form.addEventListener('submit',(event)=>{
+            event.preventDefault();//기능초기화
+            const elem = $form.querySelector('input');
+            alert(elem.value);
+        });
+        const ulElem = document.querySelector('ul');
+        ulElem.addEventListener('click',(event)=>{
+            // console.log( event.currentTarget );
+            console.dir( event.target );
+            // alert(event.target.textContent);
+            // if( event.target.tagName==='LI'){
+            //     alert(event.target.textContent);
+            // };
+            const elem = event.target.closest('li');
+            if(elem){
+                alert(event.target.textContent);
+            }
+        });
+    </script>
+</body>
+</html>
