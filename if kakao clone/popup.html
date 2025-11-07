@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        body{
+            height: 100vh;
+        } 
+        .popup-box{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(154, 154, 154, 0.5);
+            display: none;
+            .popup{
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,50%);
+                background-color: #fff;
+                padding: 2rem;
+                border-radius: 1rem;
+                font-size: 2rem;
+                .btn-wrap{
+                    button{
+                        background-color: none;
+                        padding: 1rem 2rem;
+                        border-radius: 1rem;
+                        font-size: 2rem;
+                        outline: none;
+                        border: 2px solid #222;
+                    }
+                    p{
+                        text-align: center;
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <button>Login</button>
+    <div class="popup-box">
+        <div class="popup">
+            <p>Please Login</p>
+            <div class="btn-wrap">
+            <button>Cancel</button>
+            <button>Login</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const pop = document.querySelector('button');
+        const pb = document.querySelector('.popup-box');
+        const cE=pb.querySelector('button');
+        console.log(cE);
+        pop.addEventListener('click',()=>{
+            pb.style.display = 'block';
+        });
+        cE.addEventListener('click',()=>{
+            pb.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

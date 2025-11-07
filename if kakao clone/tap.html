@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tap layout</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        main{
+            width: 70%;
+            margin: 1rem auto;
+        }
+        .tab-menu{
+            display: flex;
+            li{
+                cursor: pointer;
+                padding: 0.5rem 1rem;
+                border: 1px solid #222;
+                border-right: none;
+                &:last-child{
+                    border-right: 1px solid #222;
+                }
+            }
+            li.active{
+                background-color: aqua;
+                color: #222;
+            }
+        }
+        .tab-item{
+            position: relative;
+            width: 100%;
+            height: 400px;
+            li{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: none;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                &.show{
+                    display: block;
+                }
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+    <ul class="tab-menu">
+        <li class="active">menu-1</li>
+        <li>menu-2</li>
+        <li>menu-3</li>
+    </ul>
+    <ul class="tab-item">
+        <li class="show"><img src="./media/if(kakao)25ㅣ홈/imgi_10_99d836d4019900001.png" alt=""></li>
+        <li><img src="./media/if(kakao)25ㅣ홈/imgi_16_99bb81ad019900001.png" alt=""></li>
+        <li><img src="./media/if(kakao)25ㅣ홈/imgi_23_99d14b08019900001.png" alt=""></li>
+    </ul>
+    </main>
+    <script>
+        const tabM = document.querySelectorAll('.tab-menu>li');
+        const tabitem = document.querySelectorAll('.tab-item>li');
+
+        tabM.forEach((menu,idx)=>{
+            menu.addEventListener('click',()=>{
+                const prev = document.querySelector('.active');
+                prev.classList.remove('active');
+                //각각의 요소에 active라는 클래스를 추가
+                menu.classList.add('active');
+                //tap-item이 메뉴 idx 값에 맞게 show 클래스를 추가
+                const item = document.querySelector('.show');
+                item.classList.remove('show');
+                tabitem[idx].classList.add('show');
+            });
+        });
+    </script>
+</body>
+</html>

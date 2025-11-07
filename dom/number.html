@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>no.</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        body{display: flex;
+            justify-content: center;
+            align-items: center;}
+        main{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                cursor: pointer;
+                width: 200px;
+                transition: 0.3;
+                &:hover{transform: scale(1.2);}
+            }
+        }
+        #lightbox{
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            .content{
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                background-color: #fff;
+                padding: 50px;
+                border-radius: 1rem;
+                .close{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-size: 2rem;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 1rem;
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+                    &:hover{
+                        background: #ddd;
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <img src="./image/img-01.png" alt="이것은 이미지 1의 설명입니다. 클릭하면 크게 보입니다.">
+    </main>
+    <div id="lightbox">
+        <div class="content">
+            <button class="close">x</button>
+            <img src="./image/img-01.png" alt="크게 보여지는 이미지">
+            <p>이미지 alt 값이 보여집니다.</p>
+        </div>
+    </div>
+    <main>
+        <img src="./image/img-02.png" alt="이것은 이미지 2의 설명입니다. 클릭하면 크게 보입니다.">
+    </main>
+    <div id="lightbox">
+        <div class="content">
+            <button class="close">x</button>
+            <img src="./image/img-02.png" alt="크게 보여지는 이미지">
+            <p>이미지 alt 값이 보여집니다.</p>
+        </div>
+    </div>
+    <script>
+        // const $img = document.querySelector('main>img');
+        // const $box = document.querySelector('#lightbox');
+        // const ce = document.querySelector('.colse');
+        // $img.forEach((item)=>{
+        //     $img.addEventListener('click',()=>{
+        //         const img = $box.children[0].querySelector('img');
+        //         if(img){
+        //             img.remove();
+        //         }
+        //         const elem = document.createElement('img');
+        //         elem.src = item.src;
+        //         elem.alt = item.alt;
+        //         $box.children[0].append(elem);
+        //         $box.style.display = 'block';
+        //     });
+        // });
+        // ce.addEventListener('click',()=>{
+        //     $box.style.display = 'none';
+        // });
+        //이미지를 복제하고 기존에 보여지는 이미지를 다른 이미지로 교체
+        const imgElem = document.querySelectorAll('main>img');
+        const boxElem =document.querySelector('#lightbox');
+        const contentElem = boxElem.children[0];
+        const closeElem=contentElem.querySelector('.close');
+        imgElem.forEach((item)=>{
+            item.addEventListener('click',()=>{
+                const clone = item.cloneNode(true);
+                const oldImg = contentElem.querySelector('img');
+                if(oldImg){
+                    oldImg.replaceWith(clone);
+                }else{
+
+                    contentElem.append(clone);
+                }
+                const pElem = document.createElement('p');
+                p.textContent = item.alt;
+                const oldP =contentElem.querySelector('p');
+                if( oldP ){
+                    oldP.replaceWith(pElem);
+                }else{
+                    contentElem.append(pElem);
+                }
+                boxElem.style.display = 'block';
+            });
+        });
+        closeElem.addEventListener('click',()=>{
+            boxElem.style.display = "none";
+        });
+        boxElem.addEventListener('click',(e)=>{
+            // console.log(e.target);
+            if(e.target === boxElem){
+                boxElem.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
