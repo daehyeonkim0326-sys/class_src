@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Event</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        main{
+            height: 400vh;
+            background-color: #ddd;
+        }
+        h1{background-color: thistle;
+        width: 17%;}
+        h1.fixed{
+            position: fixed;
+            top: 50vh;
+            left: 0;
+        }
+        .progressbar{
+            width: 100%;
+            height: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: navy;
+        }
+        .top{
+            cursor: pointer;
+            position: fixed;
+            right: 1rem;
+            bottom: 1rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-sizing: 0 0 10px #222;
+            background-color: #fff;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Scroll Event</h1>
+    </main>
+    <div class="progressbar"></div>
+    <div class="top">TOP</div>
+    <script>
+        const h1Elem = document.querySelector('h1');
+        //프로그래스 바 요소
+        const progressElem =document.querySelector('.progressbar');
+        const topbtn = document.querySelector('.top');
+        const mainElem = document.querySelector('main');
+        topbtn.addEventListener('click',()=>{
+            mainElem.scrollIntoView({behavior:'smooth'});
+        });
+        window.addEventListener('scroll',()=>{
+            //전체 문서의 높이(스크롤이 가능한 전체길이)
+            //scrollHeight: 전체 문서의 높이(스크롤이 가능한 전체길이)
+            //clientHeight: 100vh
+            // const {scrollHeight} = document.documentElement.scrollHeight;            
+            const {scrollHeight,clientHeight,scrollTop} = document.documentElement;
+            const scrollable = scrollHeight - clientHeight;
+            const rate = (scrollTop/scrollable)*100;
+            progressElem.style.width = `${rate}%`;
+        });
+    </script>
+</body>
+</html>
