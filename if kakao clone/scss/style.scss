@@ -1,0 +1,16 @@
+@charset 'utf-8';
+@use 'reset';
+@use 'font';
+@use 'variable' as *;
+@use 'mixin' as mixin;
+
+html{
+    font-size: 10px;
+    @include mixin.respond{
+        font-size: 16px;
+        
+    }
+}
+h1{
+    @include mixin.btn-base-yellow;
+}
